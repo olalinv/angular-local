@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pser-local": {
+    "angular-local": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/pser-local",
+            "outputPath": "dist/angular-local",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "pser-local:build"
+            "browserTarget": "angular-local:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "pser-local:build:production"
+              "browserTarget": "angular-local:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "pser-local:build"
+            "browserTarget": "angular-local:build"
           }
         },
         "test": {
@@ -114,15 +114,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "pser-local:serve"
+            "devServerTarget": "angular-local:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "pser-local:serve:production"
+              "devServerTarget": "angular-local:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "pser-local"
+  "defaultProject": "angular-local"
 }
